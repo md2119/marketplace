@@ -1,0 +1,15 @@
+com\intuit\engine\MarketplaceService$2.class
+com\intuit\engine\MarketplaceService$1.class
+com\intuit\api\UserType.class
+com\intuit\engine\MarketplaceManager.class
+com\intuit\repo\ProjectRepository.class
+com\intuit\base\MarketplaceProject.class
+com\intuit\repo\UserRepository.class
+com\intuit\base\User.class
+com\intuit\base\Bid.class
+com\intuit\engine\MarketplaceService.class
+com\intuit\api\IProject.class
+com\intuit\api\ProjectStatus.class
+com\intuit\engine\MiscUtil.class
+com\intuit\web\MarketplaceController.class
+com\intuit\app\AppInit.class
