@@ -1,4 +1,4 @@
-# marketplace
+# Marketplace - REST
 
 
 How to use:
@@ -14,12 +14,14 @@ How to use:
 API documentation
 -----------------
 1. To create new user
-  http://localhost:8080/marketplace/api/users/create
-  
+```
+      http://localhost:8080/marketplace/api/users/create
+      
       Request Body : 
-                  name
-                  userType : buyer/seller
-                  attributes
+            name
+            userType : buyer/seller
+            attributes
+
       example :
             {
             "name": "DummyUser",
@@ -29,54 +31,63 @@ API documentation
                   "contact" : "12233222222222"
                   }
             }
-
+```
 2. To create new project
-  http://localhost:8080/marketplace/api/projects/create?user={userid}
+```
+      http://localhost:8080/marketplace/api/projects/create?user={userid}
   
-      Request Body : name
-                     desc
-                     bidEndDate
+      Request Body : 
+           name
+           desc
+           bidEndDate
+
       example :
-      http://localhost:8080/marketplace/api/projects/create?user=1
+            http://localhost:8080/marketplace/api/projects/create?user=1
             {
             "name": "OldProject",
             "desc": "project description",
             "bidEndDate": "2019-01-12T13:15:30"
             }
-
+```
 3. To create a bid for project
-  http://localhost:8080/marketplace/api/projects/bid?user={userid}&project={projectid}&bid={bidvalue}
-  
+```
+      http://localhost:8080/marketplace/api/projects/bid?user={userid}&project={projectid}&bid={bidvalue}
+ 
       example : 
-      http://localhost:8080/marketplace/api/projects/bid?user=1&project=5&bid=10000
-    
+            http://localhost:8080/marketplace/api/projects/bid?user=1&project=5&bid=10000
+```    
 4. To list all users
-  http://localhost:8080/marketplace/api/users
-  
+```
+      http://localhost:8080/marketplace/api/users
+```  
 5. To list all projects
-  http://localhost:8080/marketplace/api/projects
-  
+```
+      http://localhost:8080/marketplace/api/projects
+```  
 6. To find user by id
-  http://localhost:8080/marketplace/api/users/{userid}
+```
+      http://localhost:8080/marketplace/api/users/{userid}
   
       example : 
-      http://localhost:8080/marketplace/api/users/1
-    
+            http://localhost:8080/marketplace/api/users/1
+```    
 7. To find project by id
-  http://localhost:8080/marketplace/api/projects/project/{projectid}
-  
+```
+      http://localhost:8080/marketplace/api/projects/project/{projectid} 
+      
       example : 
-      http://localhost:8080/marketplace/api/projects/project/5
-  
+            http://localhost:8080/marketplace/api/projects/project/5
+```  
 8. To find project by status
-  http://localhost:8080/marketplace/api/projects/{status}
-  status : open/closed
+```
+      http://localhost:8080/marketplace/api/projects/{status}
+      status : open/closed
   
       example : 
-      http://localhost:8080/marketplace/api/projects/open
+            http://localhost:8080/marketplace/api/projects/open
+```
 
-
-Assupmtions
+Assumptions
 -----------
 1. Actors are mutually exclusive buyer cannot be a seller and vice-versa
 2. Timezone managment ignored
